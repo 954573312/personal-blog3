@@ -1,0 +1,19 @@
+{
+  "builds": [
+    {
+      "src": "PersonalBlog3.csproj", // 替换成你的项目csproj文件名
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "out"
+      }
+    }
+  ],
+  "buildCommand": "curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --version 8.0 && dotnet publish -c Release -o out",
+  "outputDirectory": "out",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
