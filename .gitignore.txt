@@ -1,7 +1,0 @@
-# 忽略Visual Studio缓存文件
-.vs/
-# 忽略编译输出文件
-bin/
-obj/
-# 忽略发布文件夹
-publish/
